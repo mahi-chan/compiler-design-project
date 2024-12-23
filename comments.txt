@@ -1,0 +1,8 @@
+// Constant values for operations
+// Display available operations to the user
+// Perform calculation based on the chosen operation
+// Check for division by zero
+// Variables to store user input
+// Show menu to the user
+// Get operation and numbers from the user
+// Perform calculation and show result

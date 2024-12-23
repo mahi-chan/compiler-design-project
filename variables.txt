@@ -1,0 +1,3 @@
+Variable Name: num1, Type: float
+Variable Name: num2, Type: float
+Variable Name: operation, Type: char

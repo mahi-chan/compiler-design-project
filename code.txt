@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+
+const char ADD = '+';
+const char SUBTRACT = '-';
+const char MULTIPLY = '*';
+const char DIVIDE = '/';
+
+void showMenu() {
+    
+    cout << "Simple Calculator" << endl;
+    cout << "-----------------" << endl;
+    cout << "Available operations:" << endl;
+    cout << "  + : Addition" << endl;
+    cout << "  - : Subtraction" << endl;
+    cout << "  * : Multiplication" << endl;
+    cout << "  / : Division" << endl;
+    cout << "Enter your choice of operation and two numbers." << endl;
+}
+
+float calculate(float num1, float num2, char operation) {
+    
+    switch (operation) {
+        case ADD:
+            return num1 + num2;
+        case SUBTRACT:
+            return num1 - num2;
+        case MULTIPLY:
+            return num1 * num2;
+        case DIVIDE:
+            
+            if (num2 == 0) {
+                cout << "Error: Division by zero is undefined." << endl;
+                return 0;
+            }
+            return num1 / num2;
+        default:
+            cout << "Invalid operation!" << endl;
+            return 0;
+    }
+}
+
+int main() {
+    
+    float num1, num2;
+    char operation;
+
+    
+    showMenu();
+
+    
+    cout << "Enter operation (+, -, *, /): ";
+    cin >> operation;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+
+    
+    float result = calculate(num1, num2, operation);
+    cout << "Result: " << result << endl;
+
+    return 0;
+}
+
